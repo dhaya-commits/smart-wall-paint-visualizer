@@ -1,0 +1,121 @@
+.workspace-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.workspace-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 0;
+  border-bottom: 1px solid var(--glass-border);
+  
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+    h2 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: var(--primary-color);
+    }
+  }
+}
+
+.workspace-main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 320px;
+  padding: 20px;
+  border-radius: 0;
+  border-right: 1px solid var(--glass-border);
+  overflow-y: auto;
+  
+  h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+  }
+}
+
+.tool-section {
+  margin-bottom: 30px;
+  
+  .help-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .btn-full {
+    width: 100%;
+  }
+}
+
+.color-section {
+  .color-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .color-swatch {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 2px solid transparent;
+    
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    
+    &.active {
+      transform: scale(1.1);
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 2px white, 0 0 0 4px var(--primary-color);
+    }
+  }
+  
+  .selected-color-name {
+    font-size: 0.9rem;
+    color: var(--text-color);
+  }
+}
+
+.canvas-area {
+  flex: 1;
+  background-color: #e9ecef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow: auto;
+}
+
+.canvas-wrapper {
+  padding: 10px;
+  background: white;
+  box-shadow: var(--shadow);
+  
+  canvas {
+    display: block;
+    cursor: crosshair;
+    max-width: 100%;
+    height: auto;
+  }
+}
