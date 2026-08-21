@@ -23,11 +23,5 @@
 ├── docs/ # Documentation
 └── public/ # Shared assets
 
-## Installation & Setup
-(To be updated)
-
-## Deadline
-September 13, 2026
-
 ## Author
 Dhayananth R R
